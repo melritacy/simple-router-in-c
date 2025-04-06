@@ -87,7 +87,7 @@ int validate_icmp(uint8_t* packet, unsigned int len) {
         #endif
         return 0;
     }
-
+ 
     sr_ip_hdr_t *ip_hdr = (sr_ip_hdr_t*)(packet + sizeof(sr_ethernet_hdr_t));
     sr_icmp_hdr_t *icmp_hdr = (sr_icmp_hdr_t*)(packet + sizeof(sr_ethernet_hdr_t) + (ip_hdr->ip_hl * 4));
 
